@@ -6,15 +6,88 @@
 ul, ol, menu{
     list-style: none;
 }
+body{
+    background-color: rgb(240, 217, 188);
+    font-family: "Roboto", sans-serif;
+}
+.main-header{
+    text-align: center;
+    color: white;
+    background-color: coral;
+    padding: 50px;
+    font-size: 35px;
+}
 .container{
     width: 700px;
     margin: 100px auto;
+    background-color: white ;
+    border-radius: 10px;
+    padding: 10px;
 }
 ul >*{
- border: 1px solid black;
  display: flex;
  justify-content: space-between;
+ align-items: center;
+ padding: 5px;
+ padding-left: 10px;
+ border-radius: 10px;
+}
+li:hover{
+    background-color:rgb(252, 190, 167) ;
+    color: white;
+}
+.item-text{
+    cursor: pointer;
+}
+.user-text{
+    border-radius: 10px;
+    border: 6px solid rgb(245, 173, 147);
+    width: 100%; 
+    padding: 10px;
+    font-size: 15px;  
+}
+.input{
+    border-radius: 10px;
+    background-color: white;
+    padding: 8px;
+    font-size: 15px;
+    gap: 10px;
+}
+input:focus-visible{
+  outline: none;
 }
 .done-line{
     text-decoration: line-through;
+}
+.d-flex{
+    display:flex;
+    justify-content:space-between;
+}
+button.btn{
+    border: none;
+    padding: 10px 12px;
+    font-size: 17px;
+    color: white;
+   
+    cursor: pointer;
+}
+.add{
+    background-color: rgb(92, 184, 172);
+    border-radius: 12px;
+    height: 50px;
+}
+.add:hover{
+    background-color:  rgb(32, 139, 125);
+}
+.rem{
+    background-color: coral;
+    border-radius: 90px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+}
+.rem:hover{
+    background-color: rgb(252, 84, 23)
 }

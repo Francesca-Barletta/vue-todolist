@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/app.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <div id="app">{{ message }}
+    <div id="app">
+        <header class="main-header">
+            <h1>My To-do List</h1>
+        </header>
         <div class="container">
-            <div>
+            <div class="d-flex input">
                 <input @keydown.enter="addListItem" type="text" class="user-text" v-model.trim="userValue">
-                <button @click="addListItem">aggiungi</button>
+                <button class="btn add" @click="addListItem">aggiungi</button>
             </div>
-            
+
             <ul>
                 <li v-for="(item, i) in todos">
-                    <p @click="item.done = !item.done" :class="item.done === true ? 'done-line' : ''">{{item.text}}</p>
-                    <button @click="removeListItem(i)">x</button>
+                    <p @click="item.done = !item.done" :class="item.done === true ? 'done-line' : ''" class="item-text">
+                        {{item.text}}</p>
+                    <button class="btn rem" @click="removeListItem(i)">x</button>
                 </li>
             </ul>
         </div>
@@ -32,4 +41,5 @@
 
     <script src="./js/app.js"></script>
 </body>
+
 </html>
