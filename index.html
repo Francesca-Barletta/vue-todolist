@@ -8,7 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">{{ message }}
+        <div class="container">
+            <ul>
+                <li v-for="(item, i) in todo">
+                    <p :class="item.done === true ? 'done-line' : ''">{{item.text}}</p>
+                    <button @click="removeListItem(i)">x</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
     <script>
 
     </script>
